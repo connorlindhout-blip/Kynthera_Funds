@@ -1,0 +1,239 @@
+date,description,amount,balance,category
+2025-01-01,Office and warehouse rent,-2200.0,15800.0,Fixed expense
+2025-01-03,Client invoice payment,2744.07,18544.07,Revenue
+2025-01-05,Utilities and software subscriptions,-381.76,18162.31,Operating expense
+2025-01-08,Small customer payment,1119.61,19281.92,Revenue
+2025-01-10,Client invoice payment,3887.16,23169.09,Revenue
+2025-01-12,Small customer payment,1003.18,24172.27,Revenue
+2025-01-15,Utilities and software subscriptions,-384.9,23787.37,Operating expense
+2025-01-16,Supplier payment,-821.93,22965.44,Variable expense
+2025-01-18,Client invoice payment,4988.84,27954.28,Revenue
+2025-01-21,Supplier payment,-1230.41,26723.87,Variable expense
+2025-01-25,Client invoice payment,5845.45,32569.32,Revenue
+2025-01-26,Salary payment,-7800.0,24769.32,Fixed expense
+2025-01-29,Supplier payment,-991.94,23777.38,Variable expense
+2025-01-31,Supplier payment,-786.25,22991.13,Variable expense
+2025-02-01,Office and warehouse rent,-2200.0,20791.13,Fixed expense
+2025-02-03,Client invoice payment,5063.03,25854.16,Revenue
+2025-02-04,Supplier payment,-1036.63,24817.54,Variable expense
+2025-02-04,Small customer payment,601.04,25418.58,Revenue
+2025-02-05,Utilities and software subscriptions,-488.96,24929.62,Operating expense
+2025-02-05,Supplier payment,-1205.62,23724.0,Variable expense
+2025-02-09,Supplier payment,-604.79,23119.21,Variable expense
+2025-02-10,Client invoice payment,4859.8,27979.01,Revenue
+2025-02-13,Supplier payment,-772.49,27206.52,Variable expense
+2025-02-15,Utilities and software subscriptions,-484.75,26721.76,Operating expense
+2025-02-18,Client invoice payment,4519.67,31241.43,Revenue
+2025-02-19,Supplier payment,-1280.67,29960.76,Variable expense
+2025-02-19,Small customer payment,1239.8,31200.55,Revenue
+2025-02-21,Supplier payment,-665.06,30535.5,Variable expense
+2025-02-24,Supplier payment,-538.14,29997.36,Variable expense
+2025-02-25,Client invoice payment,4782.16,34779.52,Revenue
+2025-02-25,Supplier payment,-2098.53,32680.99,Variable expense
+2025-02-26,Salary payment,-7800.0,24880.99,Fixed expense
+2025-03-01,Office and warehouse rent,-2200.0,22680.99,Fixed expense
+2025-03-01,Small customer payment,1166.5,23847.49,Revenue
+2025-03-03,Client invoice payment,3567.91,27415.4,Revenue
+2025-03-03,Supplier payment,-981.16,26434.24,Variable expense
+2025-03-05,Utilities and software subscriptions,-460.42,25973.82,Operating expense
+2025-03-05,Supplier payment,-975.32,24998.5,Variable expense
+2025-03-06,Supplier payment,-873.65,24124.85,Variable expense
+2025-03-10,Client invoice payment,4463.31,28588.16,Revenue
+2025-03-11,Supplier payment,-648.48,27939.69,Variable expense
+2025-03-15,Utilities and software subscriptions,-467.55,27472.14,Operating expense
+2025-03-16,Supplier payment,-1891.09,25581.05,Variable expense
+2025-03-18,Client invoice payment,5985.84,31566.88,Revenue
+2025-03-19,Supplier payment,-1857.65,29709.23,Variable expense
+2025-03-20,Supplier payment,-797.37,28911.86,Variable expense
+2025-03-22,Supplier payment,-1351.91,27559.95,Variable expense
+2025-03-23,Supplier payment,-1489.77,26070.18,Variable expense
+2025-03-25,Client invoice payment,3403.07,29473.25,Revenue
+2025-03-25,Supplier payment,-1049.64,28423.6,Variable expense
+2025-03-26,Salary payment,-7800.0,20623.6,Fixed expense
+2025-03-27,Supplier payment,-1419.83,19203.77,Variable expense
+2025-03-31,Supplier payment,-1309.12,17894.65,Variable expense
+2025-04-01,Office and warehouse rent,-2200.0,15694.65,Fixed expense
+2025-04-01,Supplier payment,-1240.72,14453.93,Variable expense
+2025-04-03,Client invoice payment,3732.08,18186.01,Revenue
+2025-04-04,Small customer payment,1201.46,19387.47,Revenue
+2025-04-05,Utilities and software subscriptions,-391.67,18995.8,Operating expense
+2025-04-10,Client invoice payment,2918.04,21913.84,Revenue
+2025-04-11,Supplier payment,-706.45,21207.4,Variable expense
+2025-04-12,Supplier payment,-672.8,20534.6,Variable expense
+2025-04-13,Supplier payment,-1977.91,18556.69,Variable expense
+2025-04-14,Supplier payment,-1549.8,17006.88,Variable expense
+2025-04-15,Utilities and software subscriptions,-419.91,16586.98,Operating expense
+2025-04-15,Supplier payment,-581.3,16005.68,Variable expense
+2025-04-15,Small customer payment,833.4,16839.08,Revenue
+2025-04-16,Supplier payment,-950.1,15888.98,Variable expense
+2025-04-18,Client invoice payment,4816.58,20705.56,Revenue
+2025-04-19,Small customer payment,875.68,21581.24,Revenue
+2025-04-20,Supplier payment,-1908.01,19673.23,Variable expense
+2025-04-21,Supplier payment,-699.41,18973.82,Variable expense
+2025-04-22,Supplier payment,-1416.06,17557.75,Variable expense
+2025-04-22,Small customer payment,1131.86,18689.61,Revenue
+2025-04-25,Client invoice payment,4547.22,23236.83,Revenue
+2025-04-26,Salary payment,-7800.0,15436.83,Fixed expense
+2025-04-29,Supplier payment,-1032.64,14404.19,Variable expense
+2025-05-01,Office and warehouse rent,-2200.0,12204.19,Fixed expense
+2025-05-03,Client invoice payment,3552.39,15756.58,Revenue
+2025-05-05,Utilities and software subscriptions,-544.19,15212.39,Operating expense
+2025-05-09,Supplier payment,-1552.06,13660.33,Variable expense
+2025-05-10,Client invoice payment,4563.36,18223.69,Revenue
+2025-05-10,Small customer payment,1355.16,19578.85,Revenue
+2025-05-11,Supplier payment,-492.58,19086.27,Variable expense
+2025-05-15,Utilities and software subscriptions,-452.62,18633.65,Operating expense
+2025-05-15,Small customer payment,978.0,19611.65,Revenue
+2025-05-18,Client invoice payment,4564.83,24176.48,Revenue
+2025-05-20,Supplier payment,-488.28,23688.2,Variable expense
+2025-05-20,Small customer payment,992.09,24680.29,Revenue
+2025-05-24,Supplier payment,-811.49,23868.79,Variable expense
+2025-05-25,Client invoice payment,4362.73,28231.52,Revenue
+2025-05-25,Supplier payment,-1649.92,26581.6,Variable expense
+2025-05-26,Salary payment,-7800.0,18781.6,Fixed expense
+2025-05-31,Supplier payment,-2247.44,16534.16,Variable expense
+2025-06-01,Office and warehouse rent,-2200.0,14334.16,Fixed expense
+2025-06-01,Supplier payment,-1921.91,12412.24,Variable expense
+2025-06-02,Supplier payment,-1789.3,10622.94,Variable expense
+2025-06-03,Client invoice payment,3373.52,13996.46,Revenue
+2025-06-05,Utilities and software subscriptions,-472.1,13524.36,Operating expense
+2025-06-05,Supplier payment,-160.45,13363.91,Variable expense
+2025-06-07,Supplier payment,-1262.21,12101.7,Variable expense
+2025-06-07,Small customer payment,957.3,13059.0,Revenue
+2025-06-08,Supplier payment,-882.9,12176.1,Variable expense
+2025-06-10,Client invoice payment,4145.63,16321.74,Revenue
+2025-06-10,Small customer payment,870.61,17192.35,Revenue
+2025-06-11,Supplier payment,-303.12,16889.23,Variable expense
+2025-06-12,Supplier payment,-149.87,16739.36,Variable expense
+2025-06-12,Small customer payment,1087.36,17826.71,Revenue
+2025-06-15,Utilities and software subscriptions,-444.47,17382.25,Operating expense
+2025-06-15,Supplier payment,-1155.86,16226.38,Variable expense
+2025-06-17,Supplier payment,-533.76,15692.62,Variable expense
+2025-06-18,Client invoice payment,4177.78,19870.41,Revenue
+2025-06-19,Small customer payment,639.86,20510.27,Revenue
+2025-06-20,Supplier payment,-1141.01,19369.26,Variable expense
+2025-06-21,Supplier payment,-927.75,18441.51,Variable expense
+2025-06-25,Client invoice payment,5688.6,24130.11,Revenue
+2025-06-26,Salary payment,-7800.0,16330.11,Fixed expense
+2025-06-29,Small customer payment,917.35,17247.45,Revenue
+2025-06-30,Supplier payment,-1684.31,15563.15,Variable expense
+2025-07-01,Office and warehouse rent,-2200.0,13363.15,Fixed expense
+2025-07-03,Client invoice payment,3069.39,16432.54,Revenue
+2025-07-04,Supplier payment,-1068.06,15364.47,Variable expense
+2025-07-05,Utilities and software subscriptions,-538.48,14825.99,Operating expense
+2025-07-10,Client invoice payment,6837.91,21663.9,Revenue
+2025-07-15,Utilities and software subscriptions,-499.0,21164.9,Operating expense
+2025-07-15,Supplier payment,-1688.38,19476.52,Variable expense
+2025-07-15,Small customer payment,828.44,20304.96,Revenue
+2025-07-18,Client invoice payment,4197.95,24502.91,Revenue
+2025-07-20,Small customer payment,158.87,24661.78,Revenue
+2025-07-25,Client invoice payment,4422.51,29084.29,Revenue
+2025-07-25,Supplier payment,-1355.09,27729.2,Variable expense
+2025-07-26,Salary payment,-7800.0,19929.2,Fixed expense
+2025-07-26,Supplier payment,-1604.02,18325.18,Variable expense
+2025-07-30,Supplier payment,-1259.17,17066.01,Variable expense
+2025-08-01,Office and warehouse rent,-2200.0,14866.01,Fixed expense
+2025-08-01,Supplier payment,-998.15,13867.87,Variable expense
+2025-08-01,Small customer payment,508.56,14376.43,Revenue
+2025-08-03,Client invoice payment,5533.03,19909.46,Revenue
+2025-08-03,Small customer payment,478.38,20387.84,Revenue
+2025-08-05,Utilities and software subscriptions,-435.66,19952.18,Operating expense
+2025-08-06,Supplier payment,-746.16,19206.02,Variable expense
+2025-08-10,Client invoice payment,4223.63,23429.65,Revenue
+2025-08-12,Small customer payment,882.33,24311.98,Revenue
+2025-08-14,Supplier payment,-1605.08,22706.89,Variable expense
+2025-08-15,Utilities and software subscriptions,-437.23,22269.66,Operating expense
+2025-08-17,Supplier payment,-1317.92,20951.75,Variable expense
+2025-08-18,Client invoice payment,4670.86,25622.61,Revenue
+2025-08-22,Small customer payment,1399.32,27021.93,Revenue
+2025-08-25,Client invoice payment,3399.86,30421.79,Revenue
+2025-08-26,Salary payment,-7800.0,22621.79,Fixed expense
+2025-08-27,Supplier payment,-623.52,21998.28,Variable expense
+2025-08-31,Supplier payment,-917.59,21080.69,Variable expense
+2025-09-01,Office and warehouse rent,-2200.0,18880.69,Fixed expense
+2025-09-02,Supplier payment,-441.48,18439.21,Variable expense
+2025-09-02,Small customer payment,641.42,19080.63,Revenue
+2025-09-03,Client invoice payment,4711.75,23792.38,Revenue
+2025-09-05,Utilities and software subscriptions,-507.11,23285.27,Operating expense
+2025-09-05,Supplier payment,-923.71,22361.56,Variable expense
+2025-09-06,Small customer payment,967.23,23328.79,Revenue
+2025-09-07,Small customer payment,766.64,24095.43,Revenue
+2025-09-09,Supplier payment,-114.25,23981.18,Variable expense
+2025-09-10,Client invoice payment,6794.4,30775.58,Revenue
+2025-09-13,Supplier payment,-1436.03,29339.55,Variable expense
+2025-09-15,Utilities and software subscriptions,-463.76,28875.79,Operating expense
+2025-09-18,Client invoice payment,4647.95,33523.74,Revenue
+2025-09-19,Supplier payment,-1950.55,31573.19,Variable expense
+2025-09-19,Small customer payment,1046.81,32620.01,Revenue
+2025-09-20,Supplier payment,-808.93,31811.08,Variable expense
+2025-09-25,Client invoice payment,3045.91,34856.99,Revenue
+2025-09-26,Salary payment,-7800.0,27056.99,Fixed expense
+2025-09-28,Supplier payment,-1576.11,25480.87,Variable expense
+2025-10-01,Office and warehouse rent,-2200.0,23280.87,Fixed expense
+2025-10-03,Client invoice payment,4030.81,27311.68,Revenue
+2025-10-05,Utilities and software subscriptions,-513.26,26798.42,Operating expense
+2025-10-05,Supplier payment,-993.52,25804.9,Variable expense
+2025-10-07,Supplier payment,-186.7,25618.2,Variable expense
+2025-10-07,Small customer payment,704.4,26322.59,Revenue
+2025-10-08,Supplier payment,-766.36,25556.23,Variable expense
+2025-10-10,Client invoice payment,4279.45,29835.67,Revenue
+2025-10-10,Supplier payment,-1174.37,28661.3,Variable expense
+2025-10-10,Small customer payment,656.01,29317.31,Revenue
+2025-10-11,Supplier payment,-1451.35,27865.97,Variable expense
+2025-10-12,Small customer payment,1075.42,28941.38,Revenue
+2025-10-13,Small customer payment,847.33,29788.71,Revenue
+2025-10-15,Utilities and software subscriptions,-504.86,29283.85,Operating expense
+2025-10-16,Supplier payment,-1707.61,27576.24,Variable expense
+2025-10-18,Client invoice payment,5815.06,33391.3,Revenue
+2025-10-19,Supplier payment,-696.21,32695.09,Variable expense
+2025-10-20,Supplier payment,-1446.93,31248.16,Variable expense
+2025-10-21,Small customer payment,1094.44,32342.6,Revenue
+2025-10-22,Supplier payment,-471.06,31871.55,Variable expense
+2025-10-23,Supplier payment,-1734.48,30137.07,Variable expense
+2025-10-24,Small customer payment,1132.71,31269.78,Revenue
+2025-10-25,Client invoice payment,6117.84,37387.61,Revenue
+2025-10-25,Supplier payment,-1032.73,36354.89,Variable expense
+2025-10-26,Salary payment,-7800.0,28554.89,Fixed expense
+2025-10-26,Supplier payment,-1065.33,27489.56,Variable expense
+2025-11-01,Office and warehouse rent,-2200.0,25289.56,Fixed expense
+2025-11-01,Supplier payment,-1353.36,23936.2,Variable expense
+2025-11-02,Supplier payment,-949.71,22986.49,Variable expense
+2025-11-03,Client invoice payment,6013.63,29000.12,Revenue
+2025-11-05,Utilities and software subscriptions,-450.96,28549.16,Operating expense
+2025-11-05,Supplier payment,-707.94,27841.22,Variable expense
+2025-11-07,Supplier payment,-1164.12,26677.1,Variable expense
+2025-11-10,Client invoice payment,4317.38,30994.48,Revenue
+2025-11-11,Supplier payment,-637.36,30357.12,Variable expense
+2025-11-13,Supplier payment,-1648.07,28709.05,Variable expense
+2025-11-15,Utilities and software subscriptions,-382.4,28326.66,Operating expense
+2025-11-18,Client invoice payment,3380.21,31706.87,Revenue
+2025-11-19,Supplier payment,-939.95,30766.92,Variable expense
+2025-11-20,Small customer payment,977.86,31744.79,Revenue
+2025-11-22,Supplier payment,-687.26,31057.53,Variable expense
+2025-11-23,Supplier payment,-677.06,30380.46,Variable expense
+2025-11-25,Client invoice payment,4527.83,34908.29,Revenue
+2025-11-26,Salary payment,-7800.0,27108.29,Fixed expense
+2025-11-27,Small customer payment,805.05,27913.34,Revenue
+2025-11-29,Supplier payment,-1842.37,26070.97,Variable expense
+2025-11-30,Supplier payment,-2057.28,24013.69,Variable expense
+2025-12-01,Office and warehouse rent,-2200.0,21813.69,Fixed expense
+2025-12-03,Client invoice payment,7360.97,29174.66,Revenue
+2025-12-05,Utilities and software subscriptions,-410.82,28763.84,Operating expense
+2025-12-05,Supplier payment,-1213.99,27549.85,Variable expense
+2025-12-06,Supplier payment,-1351.46,26198.39,Variable expense
+2025-12-08,Supplier payment,-550.97,25647.42,Variable expense
+2025-12-10,Client invoice payment,5247.93,30895.35,Revenue
+2025-12-10,Supplier payment,-1016.88,29878.48,Variable expense
+2025-12-11,Supplier payment,-1325.49,28552.99,Variable expense
+2025-12-13,Small customer payment,896.92,29449.91,Revenue
+2025-12-15,Utilities and software subscriptions,-447.76,29002.15,Operating expense
+2025-12-17,Supplier payment,-1330.01,27672.14,Variable expense
+2025-12-18,Client invoice payment,4111.79,31783.93,Revenue
+2025-12-18,Supplier payment,-433.2,31350.73,Variable expense
+2025-12-20,Supplier payment,-1059.71,30291.01,Variable expense
+2025-12-25,Client invoice payment,3940.01,34231.03,Revenue
+2025-12-25,Supplier payment,-1098.56,33132.47,Variable expense
+2025-12-25,Small customer payment,917.48,34049.95,Revenue
+2025-12-26,Salary payment,-7800.0,26249.95,Fixed expense
+2025-12-28,Supplier payment,-1644.33,24605.62,Variable expense
+2025-12-31,Supplier payment,-1056.94,23548.68,Variable expense
