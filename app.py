@@ -1,4 +1,5 @@
 import streamlit as st
+import pandas as pd
 from src.data_processing import load_transactions, calculate_cashflow_metrics
 from src.scoring import calculate_credit_score
 
@@ -113,27 +114,34 @@ st.markdown(
         line-height: 1.5;
     }
 
-    /* Section headers */
-    h2, h3 {
-        color: #0b1f4d;
-    }
-
-    /* Streamlit metric cards */
-    div[data-testid="stMetric"] {
+    /* Custom signal cards */
+    .signal-card {
+        padding: 24px;
+        border-radius: 18px;
         background-color: #ffffff;
         border: 1px solid #dbe3f0;
-        padding: 16px;
-        border-radius: 16px;
-        box-shadow: 0 3px 10px rgba(11, 31, 77, 0.06);
+        box-shadow: 0 4px 14px rgba(11, 31, 77, 0.08);
+        margin-bottom: 18px;
+        min-height: 125px;
     }
 
-    div[data-testid="stMetricLabel"] {
-        color: #374151;
+    .signal-label {
+        color: #111827 !important;
+        font-size: 15px;
+        font-weight: 750;
+        margin-bottom: 16px;
     }
 
-    div[data-testid="stMetricValue"] {
+    .signal-value {
+        color: #0b1f4d !important;
+        font-size: 34px;
+        font-weight: 900;
+        line-height: 1.1;
+    }
+
+    /* Section headers */
+    h1, h2, h3 {
         color: #0b1f4d;
-        font-weight: 800;
     }
 
     /* Upload box */
@@ -151,6 +159,22 @@ st.markdown(
         background-color: #ffffff;
     }
 
+    /* Methodology table */
+    table {
+        border-collapse: collapse;
+        width: 100%;
+    }
+
+    thead tr th {
+        background-color: #0b1f4d !important;
+        color: white !important;
+        font-weight: 700 !important;
+    }
+
+    tbody tr td {
+        color: #0b0f19 !important;
+    }
+
     /* Horizontal spacing */
     .block-container {
         padding-top: 2rem;
@@ -160,6 +184,21 @@ st.markdown(
     """,
     unsafe_allow_html=True,
 )
+
+
+# -----------------------------
+# Helper for custom metric cards
+# -----------------------------
+def signal_card(label, value):
+    st.markdown(
+        f"""
+        <div class="signal-card">
+            <div class="signal-label">{label}</div>
+            <div class="signal-value">{value}</div>
+        </div>
+        """,
+        unsafe_allow_html=True,
+    )
 
 
 # -----------------------------
@@ -272,17 +311,31 @@ st.markdown("## Key Cash-flow Signals")
 
 m1, m2, m3, m4 = st.columns(4)
 
-m1.metric("Average monthly revenue", f"€{metrics['avg_monthly_revenue']:,.0f}")
-m2.metric("Average monthly outflows", f"€{metrics['avg_monthly_outflows']:,.0f}")
-m3.metric("Average balance", f"€{metrics['avg_balance']:,.0f}")
-m4.metric("Negative balance days", metrics["negative_balance_days"])
+with m1:
+    signal_card("Average monthly revenue", f"€{metrics['avg_monthly_revenue']:,.0f}")
+
+with m2:
+    signal_card("Average monthly outflows", f"€{metrics['avg_monthly_outflows']:,.0f}")
+
+with m3:
+    signal_card("Average balance", f"€{metrics['avg_balance']:,.0f}")
+
+with m4:
+    signal_card("Negative balance days", metrics["negative_balance_days"])
 
 m5, m6, m7, m8 = st.columns(4)
 
-m5.metric("Revenue stability", f"{metrics['revenue_stability']:.2f}")
-m6.metric("Liquidity buffer", f"{metrics['liquidity_buffer_months']:.2f} months")
-m7.metric("Volatility risk", f"{metrics['cashflow_volatility']:.2f}")
-m8.metric("Growth trend", f"{metrics['growth_trend'] * 100:.1f}%")
+with m5:
+    signal_card("Revenue stability", f"{metrics['revenue_stability']:.2f}")
+
+with m6:
+    signal_card("Liquidity buffer", f"{metrics['liquidity_buffer_months']:.2f} months")
+
+with m7:
+    signal_card("Volatility risk", f"{metrics['cashflow_volatility']:.2f}")
+
+with m8:
+    signal_card("Growth trend", f"{metrics['growth_trend'] * 100:.1f}%")
 
 
 # -----------------------------
@@ -334,7 +387,8 @@ st.line_chart(monthly_chart)
 # Transaction preview
 # -----------------------------
 with st.expander("View transaction data"):
-    st.dataframe(df)
+    st.dataframe(df, use_container_width=True)
+
 
 # -----------------------------
 # Score methodology explanation
@@ -440,7 +494,8 @@ methodology_data = [
     },
 ]
 
-st.dataframe(methodology_data, use_container_width=True)
+methodology_df = pd.DataFrame(methodology_data)
+st.table(methodology_df)
 
 st.caption(
     "The final score is capped between 0 and 100. In this MVP, the scoring rules are intentionally simple "
