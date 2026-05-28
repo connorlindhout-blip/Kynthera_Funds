@@ -335,3 +335,115 @@ st.line_chart(monthly_chart)
 # -----------------------------
 with st.expander("View transaction data"):
     st.dataframe(df)
+
+# -----------------------------
+# Score methodology explanation
+# -----------------------------
+st.markdown("## How the Score Is Calculated")
+
+st.write(
+    "The Kynthera score is a transparent rule-based score from 0 to 100. "
+    "The MVP starts from a neutral base score of 50 points and then adjusts the score "
+    "based on five cash-flow signals."
+)
+
+methodology_data = [
+    {
+        "Cash-flow signal": "Revenue stability",
+        "Condition": "≥ 0.75",
+        "Score effect": "+15",
+        "Interpretation": "Monthly revenue is relatively stable",
+    },
+    {
+        "Cash-flow signal": "Revenue stability",
+        "Condition": "0.50 to 0.74",
+        "Score effect": "+8",
+        "Interpretation": "Monthly revenue is moderately stable",
+    },
+    {
+        "Cash-flow signal": "Revenue stability",
+        "Condition": "< 0.50",
+        "Score effect": "-8",
+        "Interpretation": "Monthly revenue is unstable",
+    },
+    {
+        "Cash-flow signal": "Liquidity buffer",
+        "Condition": "≥ 1.50 months",
+        "Score effect": "+15",
+        "Interpretation": "Average balance covers more than 1.5 months of outflows",
+    },
+    {
+        "Cash-flow signal": "Liquidity buffer",
+        "Condition": "0.75 to 1.49 months",
+        "Score effect": "+7",
+        "Interpretation": "Liquidity buffer is acceptable but not strong",
+    },
+    {
+        "Cash-flow signal": "Liquidity buffer",
+        "Condition": "< 0.75 months",
+        "Score effect": "-10",
+        "Interpretation": "Liquidity buffer is weak",
+    },
+    {
+        "Cash-flow signal": "Negative balance days",
+        "Condition": "0% of observed days",
+        "Score effect": "+10",
+        "Interpretation": "No negative balance days observed",
+    },
+    {
+        "Cash-flow signal": "Negative balance days",
+        "Condition": "≤ 5% of observed days",
+        "Score effect": "+3",
+        "Interpretation": "Only a few negative balance days observed",
+    },
+    {
+        "Cash-flow signal": "Negative balance days",
+        "Condition": "> 5% of observed days",
+        "Score effect": "-12",
+        "Interpretation": "Frequent negative balance days increase liquidity risk",
+    },
+    {
+        "Cash-flow signal": "Cash-flow volatility",
+        "Condition": "≤ 0.80",
+        "Score effect": "+10",
+        "Interpretation": "Net cash flow is relatively predictable",
+    },
+    {
+        "Cash-flow signal": "Cash-flow volatility",
+        "Condition": "0.81 to 1.30",
+        "Score effect": "+2",
+        "Interpretation": "Net cash flow shows moderate volatility",
+    },
+    {
+        "Cash-flow signal": "Cash-flow volatility",
+        "Condition": "> 1.30",
+        "Score effect": "-10",
+        "Interpretation": "Net cash flow is highly volatile",
+    },
+    {
+        "Cash-flow signal": "Growth trend",
+        "Condition": "≥ 10%",
+        "Score effect": "+10",
+        "Interpretation": "Revenue increased over the observed period",
+    },
+    {
+        "Cash-flow signal": "Growth trend",
+        "Condition": "-10% to 9.9%",
+        "Score effect": "+3",
+        "Interpretation": "Revenue trend is broadly stable",
+    },
+    {
+        "Cash-flow signal": "Growth trend",
+        "Condition": "< -10%",
+        "Score effect": "-8",
+        "Interpretation": "Revenue declined over the observed period",
+    },
+]
+
+st.dataframe(methodology_data, use_container_width=True)
+
+st.caption(
+    "The final score is capped between 0 and 100. In this MVP, the scoring rules are intentionally simple "
+    "and explainable. In a production version, these thresholds would be validated and calibrated using "
+    "real repayment and default outcome data."
+)
