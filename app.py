@@ -1,12 +1,18 @@
+# Import Streamlit, which is used to build the web app interface
 import streamlit as st
+# Import pandas, which is used to work with tabular data import pandas as pd 
 import pandas as pd
+# Import helper functions that clean and process the uploaded transaction data from src.data_processing import load_transactions, calculate_cashflow_metrics 
 from src.data_processing import load_transactions, calculate_cashflow_metrics
+# Import the scoring function that calculates the credit score and recommendation from src.scoring import calculate_credit_score
 from src.scoring import calculate_credit_score
 
 
 # -----------------------------
 # Page configuration
 # -----------------------------
+
+# Set the browser tab title and use the full page width for the dashboard
 st.set_page_config(
     page_title="Kynthera Funds MVP",
     layout="wide"
@@ -16,6 +22,8 @@ st.set_page_config(
 # -----------------------------
 # Styling
 # -----------------------------
+# Inject custom CSS to give the Streamlit app a more polished dashboard appearance
+# The CSS controls the layout, colours, cards, upload box, and table styling
 st.markdown(
     """
     <style>
@@ -189,6 +197,8 @@ st.markdown(
 # -----------------------------
 # Helper for custom metric cards
 # -----------------------------
+# Reusable helper function for displaying one cash-flow metric as a styled card
+# This avoids repeating the same HTML structure for every metric
 def signal_card(label, value):
     st.markdown(
         f"""
@@ -225,8 +235,10 @@ st.write(
     "PSD2 open banking APIs. For the MVP, a CSV upload simulates the same transaction-data input."
 )
 
+# Create a file upload section where the user can upload SME transaction data
 uploaded_file = st.file_uploader("Upload transaction CSV", type=["csv"])
 
+# If no file has been uploaded yet, show an instruction message and stop the app
 if uploaded_file is None:
     st.info("Use the sample file: `data/sample_transactions.csv`.")
     st.stop()
@@ -235,19 +247,26 @@ if uploaded_file is None:
 # -----------------------------
 # Load and process data
 # -----------------------------
+# Try to load and clean the uploaded transaction file 
+# If the file cannot be processed, show an error message and stop the app
 try:
     df = load_transactions(uploaded_file)
 except Exception as e:
     st.error(f"Could not process file: {e}")
     st.stop()
 
+# Calculate cash-flow metrics from the cleaned transaction data
 metrics = calculate_cashflow_metrics(df)
+
+# Use the calculated metrics to generate the credit score, recommendation, loan estimate, and score drivers
 result = calculate_credit_score(metrics)
 
 
 # -----------------------------
 # Recommendation logic
 # -----------------------------
+# Convert the model's recommendation output into user-facing text
+# Each recommendation receives a short explanation for the credit officer
 score = result["score"]
 recommendation = result["recommendation"]
 
@@ -271,10 +290,12 @@ else:
 # -----------------------------
 # Risk report
 # -----------------------------
+# Display the main credit risk output, including the score and suggested loan amount
 st.markdown("## Kynthera Risk Report")
 
+# Split the risk report into two columns:
+# the left column shows the score, while the right column shows the loan estimate
 left, right = st.columns([1.2, 2])
-
 with left:
     st.markdown(
         f"""
@@ -307,6 +328,8 @@ with right:
 # -----------------------------
 # Cash-flow metrics
 # -----------------------------
+# Display the core cash-flow metrics used to assess SME lending risk
+# These signals help explain why the SME receives a certain score
 st.markdown("## Key Cash-flow Signals")
 
 m1, m2, m3, m4 = st.columns(4)
@@ -343,6 +366,8 @@ with m8:
 # -----------------------------
 st.markdown("## Explainable Score Drivers")
 
+# Separate score drivers into strengths, watchlist items, and risks
+# This makes the credit decision easier to interpret
 positive_drivers = [d for d in result["drivers"] if d[1] == "positive"]
 neutral_drivers = [d for d in result["drivers"] if d[1] == "neutral"]
 negative_drivers = [d for d in result["drivers"] if d[1] == "negative"]
@@ -379,6 +404,7 @@ with c3:
 # -----------------------------
 st.markdown("## Monthly Cash-flow Overview")
 
+# Prepare monthly inflow, outflow, and net cash-flow data for the line chart
 monthly_chart = metrics["monthly"].set_index("month")[["inflows", "outflows", "net_cashflow"]]
 st.line_chart(monthly_chart)
 
@@ -401,6 +427,8 @@ st.write(
     "based on five cash-flow signals."
 )
 
+# Define the rule-based scoring logic shown to the user
+# This makes the MVP transparent by explaining how each cash-flow signal affects the score
 methodology_data = [
     {
         "Cash-flow signal": "Revenue stability",
